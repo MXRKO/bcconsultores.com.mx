@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+h5{
+	font-family: 'AvantGardeBkBTBook';
+	font-weight:bold;
+	font-size:2em;
+	color:#5B4B3E;
+	margin-bottom:.3em;
+}
+
+.top404{
+	width:100%;
+	margin:0;
+	background-color:#FFF;
+	border-bottom:4px #7CA734 solid;
+	padding:5px 0 10px 0;
+}
+
+.logo{
+	width:1000px;
+	margin:0 auto 0 auto;
+}
+.contenido404{
+	width:950px;
+	margin:120px auto 0 auto;
+	min-height:320px;
+	background-image:url(../../images/error404.jpg);
+	background-position:600px 0;
+	background-repeat:no-repeat;
+}
+
+p.grande{
+	font-size:16px;
+	padding-bottom:1px;
+}

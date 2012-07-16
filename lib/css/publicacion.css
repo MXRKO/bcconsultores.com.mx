@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+#imagenPrincipalPublicacion{
+	background-image:url(../../images/publicaciones.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:100px;
+	width:100%;
+}
+
+.contenedorPublicacion{
+	background-color:#FFF;
+	background-image:url(../../images/borde_right.jpg);
+	background-repeat:repeat-y;
+	background-position:right;
+	width:915px;
+	margin:0 auto 0 auto;
+	padding:20px 45px 20px 40px;
+}
+
+
+	div.publicacion > .datos > h5{
+		font-family: 'AvantGardeBkBTBook';
+		color:#006699;	
+		font-size:18px;
+		font-weight:bold;
+		line-height:19px;
+	}
+	
+	div.publicacion > .datos > h4{
+		font-family:"Times New Roman", Times, serif;
+		color:#333;	
+		font-size:19px;
+		font-weight:bold;
+		line-height:17px;
+		padding:7px 0 0 0;
+	}
+
+	div.publicacion > .datos > a.autor{
+		color:#8BBB3A;
+		text-decoration:none;
+		font-family: 'AvantGardeBkBTBook';
+		font-size:13px;
+		line-height:18px;
+		font-weight:bold;
+	}
+/******************************************/
+
+div.principales{
+	
+}
+
+div.principales > h1{
+	font-family: Arial, Helvetica, sans-serif;
+	color:#006699;	
+	font-size:27px;
+	font-weight:normal;
+	line-height:31px;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+div.principales > p.autor{
+	color:#6C952F;
+}
+div.cuerpo{
+	border-top:2px #CCC solid;
+	padding-top:15px;
+}
+
+div.cuerpo > div.imagenPrevia {
+	float:right;
+	padding:5px;
+	border:1px #999 solid;
+	margin:0 0 20px 20px;	
+}
+
+img.gal{
+	cursor:pointer;
+}
+
+div.contentGal{
+	border:1px #666 solid;
+	background-color:#E2E4E7;
+	padding:20px;
+}
+
+div.contentGal ul li{
+	padding:5px;
+	float:left;
+	display:block;
+	background-color:#FFF;
+	border:1px #999 solid;
+	margin-right:10px;
+}

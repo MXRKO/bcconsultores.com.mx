@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.divMision{
+	width:277px; 
+	float:left; 
+	margin-top:20px;
+	padding:0 20px 20px 190px;
+	min-height:220px;
+}
+.divVision{
+	width:277px; 
+	float:left; 
+	margin-top:20px;
+	padding:0 190px 20px 20px;
+	min-height:220px;
+}
+

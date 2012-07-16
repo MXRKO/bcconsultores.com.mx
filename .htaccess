@@ -1,0 +1,19 @@
+RewriteEngine On
+Options -Indexes +FollowSymlinks
+#ErrorDocument 404: http://www.bcconsultores.com.mx/ambientales/404/
+ErrorDocument 404: http://localhost/bcconsultores.com.mx/404/
+
+RewriteBase /bcconsultores.com.mx/
+#RewriteBase /ambientales/
+RewriteRule ^inicio/														inicio.php [NC,L]
+RewriteRule ^quienes-somos/														quienes.php [NC,L]
+RewriteRule ^servicios/														servicios.php [NC,L]
+RewriteRule ^servicio/seguridad/											seguridad.php [NC,L]
+RewriteRule ^publicaciones/														publicaciones.php [NC,L]
+RewriteRule ^publicacion/(.*)/													publicacion.php?id=$1 [NC,L]
+RewriteRule ^bolsa-de-trabajo/														bolsatrabajo.php [NC,L]
+RewriteRule ^noticias/														noticias.php [NC,L]
+RewriteRule ^galeria/														galeria_pre.php [NC,L]
+RewriteRule ^galerias/(.*)/													galeria.php?mun=$1 [NC,L]
+RewriteRule ^contacto/														contacto.php [NC,L]
+RewriteRule ^404/														error/404page.php [NC,L]

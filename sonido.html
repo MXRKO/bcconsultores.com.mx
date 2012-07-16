@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script src="lib/js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="lib/js/jquery.jplayer.min.js" type="text/javascript" ></script>
+<script>
+	/*$(document).ready(function(){
+		$("#jquery_jplayer").jPlayer({ // Instantiate the plugin
+			ready: function () {
+				$(this).setFile('http://localhost/bcconsultores.com.mx/Sergio_Mendes_Funky_Bahia.mp3').play();
+			}
+		});
+		
+		$("#jquery_jplayer").jPlayerId("play", "play_button"); // Associates play
+		$("#jquery_jplayer").jPlayerId("pause", "pause_button"); // Associates pause
+	});*/
+	
+	 $(document).ready(function(){
+		  $("#jquery_jplayer").jPlayer({
+				ready: function () {
+				  $(this).jPlayer("setMedia", {
+					oga: "http://localhost/bcconsultores.com.mx/TSP-01-Cro_magnon_man.ogg"
+				  });
+				  alert("entra, "+$(this).jPlayer("play",0));
+				  $(this).jPlayer("play",5);
+				  $("#play_button").hide();
+				  $("#pause_button").hide.show();
+				},
+				volume:100,
+				supplied:"oga",
+				wmode: "window",
+				loop:1
+		  });
+		  
+		  $("#play_button").click(function(){
+			$(this).hide();
+			$("#pause_button").hide().show();
+			$("#jquery_jplayer").jPlayer("play");
+		  });
+		  
+		  $("#pause_button").click(function(){
+			$(this).hide();
+			$("#play_button").hide().show();
+			$("#jquery_jplayer").jPlayer("pause");
+		  });
+	});
+
+	
+	
+	
+	/*$(document).ready(function(){
+		$("#jquery_jplayer").jPlayer({
+			ready: function () {
+				$(this).jPlayer("setMedia", {
+					mp3:"http://localhost/bcconsultores.com.mx/Sergio_Mendes_Funky_Bahia.mp3"
+				});
+			},
+			swfPath: "/lib/js",
+			supplied: "mp3",
+			wmode: "window"
+		});
+	
+		$("#jquery_jplayer").jPlayerId("play", "play_button"); // Associates play
+		$("#jquery_jplayer").jPlayerId("pause", "pause_button"); // Associates pause
+		$("#jquery_jplayer").jPlayerId("stop", "stop_button"); // Associates stop 
+	
+	});*/
+
+</script>
+<style>
+#player_progress {
+	position: absolute;
+	left:188px;
+	top:60px;
+	background-color: #CCCCCC;
+	width:122px;
+	height:15px;
+}
+
+#player_progress_load_bar {
+	background-color:#F60;
+	width:0px;
+	height:15px;
+	cursor: pointer;
+}
+#player_progress_load_bar.different_prefix_example_buffer {
+	background-color:#990;
+}
+#player_progress_play_bar {
+	background-color:#999;
+	width:0px;
+	height:15px;
+}
+
+#pause_button{
+	background-image:url(images/sound.gif);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+#play_button{
+	background-image:url(images/sound_stop.gif);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+ul{
+	list-style:none;
+}
+
+ul li{
+	width:25px;
+	height:25px;
+}
+</style> 
+</head>
+<body>
+<div id="jquery_jplayer" ></div>
+<ul>
+    <li title="Tocar" id="play_button"></li>
+    <li title="Pausa" id="pause_button"></li>
+</ul> 
+
+<!-- <ul class="jp-controls">
+  <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+  <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+</ul> -->
+</body>
+</html>

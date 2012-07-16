@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+#imagenPrincipalGaleria{
+	background-image:url(../../images/seguridad.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:65px;
+	width:100%;
+}
+
+.contenedorGaleria{
+	background-color:#FFF;
+	background-image:url(../../images/borde_right.jpg);
+	background-repeat:repeat-y;
+	background-position:right;
+	padding:0 5px 0 0;
+	width:995px;
+	margin:0 auto 0 auto;
+	padding:10px 5px 10px 0px;
+}
+
+.mascara{
+	padding:10px 40px 0 40px;
+	width:915px;
+	background-image:url(../../images/fondoGaleria.jpg);
+	background-repeat:no-repeat;
+	background-position:left -63px;
+	height:500px;
+}
+.topGaleria{
+	padding:10px 40px 10px 40px;
+	width:915px;
+}
+
+.divImgs{
+
+}
+.cuadroImagen{
+	float:left;
+	width:505px;
+	height:367px;
+	background-image:url(../../images/preload.gif);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.divMiniaturas{
+	float:left;
+	width:360px;
+	padding-left:50px;
+}
+
+#coments{
+	padding-top:50px;
+}
+ul.ulThumbs{ 
+	padding:0; 
+	width:360px; 
+	height:367px; 
+	float:right; 
+	overflow:scroll; 
+}
+ul.ulThumbs li { width: 50px; float: left; margin:5px; margin-right:10px; list-style: none }
+ul.ulThumbs a { width: 50px; padding: 3px; display: block; border: 1px solid #CCCCCC; }
+ul.ulThumbs a.activeSlide { background:#FBA625; }
+ul.ulThumbs a:focus { outline: none; }
+ul.ulThumbs img { border: none; display: block }
+
+.itemGaleria{ 
+	float:left;
+	margin:10px 30px 10px 20px;
+}
+
+.itemGaleria a{
+	text-decoration:none;
+	color:#333;
+	font-weight:normal;
+}
+
+.itemGaleria a:hover{
+	text-decoration:underline;
+}
+
+.itemGaleria p{
+	font-size:15px;
+	font-weight:bold;
+	margin:0 0 0 25px;
+	padding:0;
+	line-height:18px;
+	color:#666;
+}
+
+.itemGaleria > .bgItem{
+	background-image:url(../../images/imgBaseGaleria.jpg);
+	background-repeat:no-repeat;
+	width:255px; 
+	height:211px;
+	background-color:#090;
+}
+
+.itemGaleria > .bgItem > a > img{
+	margin:35px 33px 35px 33px;
+}
+
+.seccion{
+	margin:10px 55px 0 45px;
+	padding:0 0 10px 0;
+	border-bottom:1px solid #CCC;
+}
+
+.seccionTexto{
+	margin:10px 55px 0 45px;
+	padding:0 0 10px 0;
+}
+
+.seccion2{
+	margin:0 0 20px 0;
+	padding:0 0 10px 0;
+	border-bottom:1px solid #CCC;
+}
+
+h2{
+	font-size:19px;
+	font-weight:normal;
+	color:#333;
+}
+
+h2.ruta{
+	font-family: 'SylfaenRegular';
+	color:#666;
+	font-size:16px;
+	font-weight:normal;
+}
+
+h2.ruta > a{
+	font-family: 'SylfaenRegular';
+	text-decoration:none;
+	color:#666;
+}
+
+h2.ruta > a:hover{
+	text-decoration:underline;
+}
+
+.topGaleriaImage{
+	margin:15px auto 0 auto; 
+	width:620px;
+	padding:25px 290px 20px 90px;
+	background-image:url(../../images/imgSeguridad.jpg);
+	height:105px;
+}
+
+.topGaleriaImage > h2{
+	padding-bottom:7px;
+	color:#000;
+	font-size:24px;
+}
+
+.topGaleria > h2{
+	color:#333;
+	font-size:20px;
+	font-weight:normal;
+	padding-bottom:15px;
+}
+
+.topGaleriaImage > p{
+	color:#000;
+	font-size:16px;
+}
+
+p.nota{
+	font-style:italic;
+	color:#333;
+}
+
+table.cursos{
+	margin-bottom:25px;
+	margin-top:25px;
+}
+
+table.cursos tr td.head{
+	background-image:url(../../images/encabezado.jpg);
+	background-repeat:repeat-x;
+	text-align:center;
+}
+
+table.cursos tr td p{
+	font-size:15px;
+}
+
+table.cursos tr td p.cen{
+	text-align:center;
+}
+
+table.cursos tr td{
+	border:1px #142232 solid;
+	font-family: 'SylfaenRegular';
+	padding:3px;
+	color:#333;
+	font-size:15px;
+}

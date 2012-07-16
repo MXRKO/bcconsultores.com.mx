@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+.contenedorContacto{
+	background-color:#FFF;
+	background-image:url(../../images/borde_right.jpg);
+	background-repeat:repeat-y;
+	background-position:right;
+	padding:0 5px 0 0;
+	width:875px;
+	margin:0 auto 0 auto;
+	padding:20px 65px 20px 60px;
+}
+
+p>.textoGM{
+	margin-top:15px;
+}
+
+.marcoMapa{
+	width:874px;
+	border:1px #999 solid;
+	margin:10px 0 10px 0;
+	padding:1px;
+}
+
+#imagenPrincipalContacto{
+	background-image:url(../../images/contacto.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:118px;
+	width:100%;
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+#imagenPrincipalPublicaciones{
+	background-image:url(../../images/publicaciones.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:100px;
+	width:100%;
+}
+
+.contenedorPublicaciones{
+	background-color:#FFF;
+	background-image:url(../../images/borde_right.jpg);
+	background-repeat:repeat-y;
+	background-position:right;
+	width:915px;
+	margin:0 auto 0 auto;
+	padding:20px 45px 20px 40px;
+}
+
+div.publicacion{
+	border-bottom:1px #666 dotted;
+	padding:10px 0 10px 0;
+}
+
+div.publicacion > .imgItem{
+	float:left;
+	width:120px;
+	padding:10px 20px 20px 10px;
+}
+
+div.publicacion > .datos{
+	float:left;
+	width:765px;
+	padding-top:10px;
+}
+
+	div.publicacion > .datos > h5{
+		font-family: 'AvantGardeBkBTBook';
+		color:#006699;	
+		font-size:18px;
+		font-weight:bold;
+		line-height:19px;
+	}
+	
+	div.publicacion > .datos > h4{
+		font-family:"Times New Roman", Times, serif;
+		color:#666;	
+		font-size:17px;
+		font-weight:normal;
+		line-height:17px;
+		padding:7px 0 0 0;
+	}
+
+	div.publicacion > .datos > a.autor{
+		color:#7CA734;
+		text-decoration:none;
+		font-family: 'AvantGardeBkBTBook';
+		font-size:12px;
+		line-height:18px;
+		font-weight:bold;
+	}
+	
+	div.publicacion > .datos > p.modificado{
+		
+	}

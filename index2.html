@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BCConsultores</title>
+<style>
+	html, body{
+		background-color:#D1CDAD;
+		font-size:20px;
+	}
+	.pronto{
+		background-image:url(images/prox.jpg);
+		background-repeat:no-repeat;
+		background-position:center center;
+		width:800px;
+		height:500px;
+		margin:0 auto;
+	}
+	.footer{
+		padding:0;
+		margin:20px auto 0 auto;
+		color:#796253;
+		font-family:"Times New Roman", Times, serif;
+		font-size:.8em;
+		font-style:italic;
+		width:800px;
+	}
+	.linea{
+		border-top:1px #9B826C solid;
+		width:800px;
+		height:1px;
+		background-color:#FFF;
+		margin:120px auto 0 auto;
+	}
+	p{
+		margin:0;
+		padding:0;
+		text-align:center;
+	}
+</style>
+<script type="text/javascript" language="javascript" src="lib/js/jquery-1.7.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".pronto").hide().fadeIn(3000);						   
+		$(".footer, .linea").hide().fadeIn(5000);
+	});
+</script>
+</head>
+
+<body>
+<div class="pronto">
+</div>
+<div class="linea"></div>
+<div class="footer">
+<p>BCConsultores, Calle Mirlo 120, Fracc. Fuentes de las Animas, C.P. 91190, Xalapa, Ver. 2011.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+}
+
+span.ubicacion{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#06C;
+	text-align:right;
+}
+
+.limpiar{
+	clear:both;
+}
+
+.barra{
+	background-image:url(../../images/fmenu.jpg);
+	background-repeat:repeat-x;
+	min-width:900px;
+}
+
+ul.principal{
+	list-style:none;
+	width:940px;
+	min-width:940px;
+	margin:0 auto 0 auto;
+	height:24px;
+	padding-top:7px;
+}
+
+ul.principal li{
+	float:left;
+	padding:5px 0 5px 0;
+	margin:0;
+}
+
+ul.principal li a{
+	padding:7px;
+	margin:0;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+}
+
+ul.principal li a:hover{
+	color:#036;
+	background-color:#B7D381;
+}
+
+ul.principal li a.seleccionado{
+	background-color:#FFF;
+	color:#000;
+}
+#confirmacion{
+	margin-bottom:5px;
+	margin-top:5px;
+	margin-left:0;
+	border-top:2px #6C0 solid;
+	border-bottom:2px #6C0 solid;
+	background-color:#C1FFCE;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px;
+}
+
+input.botonesConf{
+	color:#FFF;	
+}
+
+.botonesConf{
+	background-color:#06C;
+	border-bottom: #039 2px solid;
+	border-right:2px #039 solid;
+	border-top:2px #06F solid; 
+	border-left:2px #03F solid;
+	color:#FFF;
+	font-size:14px;
+	padding:4px;
+}
+
+.botonesAlert{
+	background-color:#C00;
+	border-bottom: #900 2px solid;
+	border-right:2px #900 solid;
+	border-top:2px #C60 solid; 
+	border-left:2px #C60 solid;
+	color:#FFF;
+	font-size:14px;
+	padding:4px;
+}
+
+	.botonesConf:hover{
+		background-color:#069;
+		cursor:pointer;
+	}
+	.botonesAlert:hover{
+		background-color:#930;
+	}
+	
+#divCentro, #pie{
+	width:900px;
+	margin:10px auto 10px auto;
+}
+
+	#divCentro textarea{
+		width:500px;
+	}
+	
+	#divCentro table{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:13px;
+	}
+	
+	#divCentro table input[type=text], textarea{
+		padding:4px;
+		color:#069;		
+		outline:none;
+		border:1px #999 solid;
+	} 
+	#divCentro table input[type=text]:focus, textarea:focus{
+		background-color:#FFFAE6;
+	}
+	#divCentro table input.arch{
+		padding:inherit;
+		color:#069;
+		border:inherit;
+	}
+	
+	#divCentro table td{
+		padding:3px;
+	}
+
+#pie{
+	margin-top:25px;
+	border-top:1px #666 dotted;
+}
+	#pie p{
+		text-align:center;
+	}
+	
+	#pie a{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		color:#06C;
+		text-decoration:none;
+	}
+	
+	#pie a:hover{
+		text-decoration:underline;
+	}
+
+.mensajeInformacion{
+	margin-bottom:15px;
+	padding:0 10px 0 10px;
+	border:2px #00529B solid;
+	background-color:#BDE5F8;
+	font-weight:bold;
+}
+
+.mensajeError{
+	margin-bottom:15px;
+	padding:0 10px 0 10px;
+	border:2px #D8000C solid;
+	background-color:#FFBABA;
+	font-weight:bold;
+}
+
+img.mensaje{
+	float:left;
+	padding:0;
+	margin:0;
+	padding-right:10px;
+}
+
+.mensajeAlerta{
+	margin-bottom:15px;
+	padding:0 10px 0 10px;
+	border:2px #9F6000 solid;
+	background-color:#FEEFB3;
+	font-weight:bold;
+}
+
+.mensajeExito{
+	margin-bottom:15px;
+	padding:0 10px 0 10px;
+	border:2px #4F8A10 solid;
+	background-color:#DFF2BF;
+	font-weight:bold;
+}
+
+.mensajeNormal{
+	margin-bottom:15px;
+	padding:0 10px 0 10px;
+	border:2px #666 solid;
+	background-color:#DFDFDF;
+	font-weight:bold;
+}
+
+.especial{
+	margin-top:15px;
+	margin-bottom:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+}

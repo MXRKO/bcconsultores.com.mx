@@ -1,0 +1,587 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	min-height:100%;
+	height:100%;
+	min-width:900px;
+}
+body{
+	background-color:#D1CDAD;
+	font-family:"Droid Sans", sans-serif;
+	height:100%;
+	min-height:100%;
+	min-width:900px;
+}
+
+.contenedor{
+	height:100%;
+	min-height:100%;
+	min-width:900px;
+	/*overflow:hidden;*/
+}
+
+.contenido{
+	width:100%;
+	min-width:900px;
+	min-height:750px;
+}
+
+.footer{
+	background-image:url(images/pasto.png);
+	background-repeat:repeat-y;
+	background-position:bottom;
+	width:100%;
+	min-height:30px;
+}
+p{
+	font-size:14px;
+	line-height:18px;
+	word-spacing:2px;
+}
+
+.opciones{
+	margin:0 auto 0 auto;
+	height:25px;
+	width:100%;
+	min-width:900px;
+	background-image:url(images/bg_black.png);
+	background-repeat:repeat-x;
+	padding-bottom:3px;
+	padding-top:3px;
+	position:fixed;
+	top:0;
+	z-index:1000;
+}
+
+	.opciones ul{
+		list-style:none;
+		margin:0 auto 0 auto;
+		width:280px;
+		height:25px;
+	}
+	
+	.opciones ul li{
+		float:left;
+		width:40px;
+		padding:0;
+		height:25px;
+		background-image:url(images/vineta.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		cursor:pointer;
+	}
+	
+	.opciones ul li.activeSlide{
+		background-image:url(images/vineta_selected.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		
+	}
+	
+	.opciones ul li a{
+		text-decoration:none;
+		padding:0;
+		width:30px;
+		height:26px;
+		background-color:#0C0;
+	}
+	
+	.opciones ul li a.normal{
+		background-image:url(images/vineta.png);
+	}
+	
+	.opciones ul li a.normal{
+		background-image:url(images/vineta_selected.png);
+	}
+	
+.limpiar{
+	clear:both;
+}
+
+/*************************** SECCIONES *****************************/
+.inicio{	
+	background-color:#C9F2EE;
+	background-image:url(images/pasto.png);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	min-height:840px;
+	padding-bottom:30px;
+}
+
+	.inicio > .espacio{
+		height:125px;
+	}
+	.inicio > .content{
+		width:900px;
+		margin:0 auto 0 auto;
+	}
+	
+	.inicio > .content > .izq{
+		width:375px;
+		float:left;
+		padding:0;
+		margin-right:15px;
+	}
+	
+	.inicio > .content > .logo{
+		background-image:url(images/logo.png);
+		background-repeat:no-repeat;
+		background-position:right top;
+		min-height:250px;
+		height:250px;
+	}
+	
+	.inicio > .content > .der{
+		float:left;
+		width:485px;
+		margin-left:25px;
+		padding-top:54px;
+		color:#213540;
+	}
+	
+	.inicio > .content > .der > h1{
+		text-align:left;
+		font-size:27px;
+		line-height:35px;
+		font-family:"Droid Sans", sans-serif;
+		font-weight:bold;
+		margin-bottom:15px;
+		color:#5C4A3C;
+	}
+	
+	.inicio > .content > .der> .senal{
+		height:3px;
+		background-color:#5C4A3C;
+		width:55px;
+		margin-bottom:10px;
+		margin-top:15px;
+	}
+	
+	.inicio > .contentSub{
+		width:570px;
+		margin:0 auto 0 auto;
+		padding:30px 140px 0 190px;
+	}
+	
+	.inicio > .content > .der > h2, .inicio > .contentSub > h2{
+		font-family:"Droid Sans", sans-serif;
+		font-size:19px;
+		font-weight:bold;
+		line-height:23px;
+		margin-bottom:15px;
+		margin-top:20px;
+		width:290px;
+		color:#5C4A3C;
+	}
+	
+	.inicio > .content > .der > p{
+		line-height:21px;
+		width:325px;
+	}
+	
+	.inicio > .contentSub > p{
+		line-height:21px;
+	}
+	
+.servicios{
+	min-height:750px;
+	background-image:url(images/clientes.jpg);
+	background-position:center;
+}
+
+	.servicios > .espacio{
+		height:120px;
+	}
+	.servicios > .content{
+		width:705px;
+		min-width:705px;
+		margin:0 auto 0 auto;
+		padding:0 0 0 195px;
+	}
+	
+	.servicios > .content > h1{
+		font-size:22px;
+		line-height:25px;
+		color:#FFF;
+		margin-bottom:20px;
+	}
+	
+	.servicios > .content > ol{
+		list-style-image:url(images/hoja_blanca.png);
+		padding-left:35px;
+		margin-bottom:10px;
+	}
+	
+	.servicios > .content > ol li{
+		font-family:"Amethysta";
+		font-size:15px;
+		color:#FCFCFC;
+		line-height:18px;
+		padding:2px 0 2px 0; 
+	}
+	.servicios > .content >p{
+		color:#FFF;
+		font-size:15px;
+		line-height:18px;
+	}
+
+
+.equipo{
+	min-height:750px;
+	padding-bottom:155px;
+	background-color:#213540;
+}
+
+	.equipo > .espacio{
+		height:100px;
+	}
+	.equipo > .content{
+		width:880px;
+		padding:10px;
+		color:#FFF;
+		margin:0 auto 0 auto;
+	}
+	
+	.equipo > .content a{
+		color:#6E98EC;
+		text-decoration:none;
+		font-size:14px;
+		line-height:18px;
+	}
+	
+	.perfiles > .presentacion > .descripcion > .espacio{
+		height:10px;
+	}
+	.equipo > .content  a:hover{
+		text-decoration:underline;
+	}
+	
+	.equipo > .content > p.nota{
+		font-size:12px;
+		padding-bottom:15px;
+		color:#F2F2F2;
+	}
+	
+	.equipo > .content > h1{
+		font-family:'Droid Sans', sans-serif;
+		font-size:24px;
+		line-height:28px;
+		margin-bottom:20px;
+	}
+	
+	.equipo > .content > .separador{
+		margin:50px 0 50px 0;
+		border-top:1px #0F181E solid;
+		background-color:#485352;
+		height:1px;
+	}
+	
+	.equipo > .content > ul.ulIntegrantes{
+		list-style:none;
+	}
+	.equipo > .content > ul.ulIntegrantes li{
+		float:left;
+		background-color:#48585C;
+		padding:5px;
+		width:55px;
+		height:55px;
+		margin:0 12px 12px 0;
+	}
+	
+	.equipo > .content > ul.ulIntegrantes li a{
+		outline:none;
+		width:80px;
+		height:80px;
+	}
+
+	.equipo > .content > ul.ulIntegrantes li.activeSlide{
+		background-color:#6E98EC;
+	}
+	
+	.equipo > .content > .presentacion > .thumb{
+		width:205px;
+		height:255px;
+		float:left;
+	}
+	
+	.equipo > .content > .presentacion > .descripcion{
+		width:655px;
+		float:left;
+		color:#FFF;
+		margin-left:20px;
+	}
+	
+	.equipo > .content > .presentacion > .descripcion > .senal{
+		margin:10px 0 10px 0;
+		height:2px;
+		width:58px;
+		background-color:#FFF;
+	}
+	
+	.equipo > .content > .presentacion > .descripcion > h2{
+		font-family:"Droid Sans", sans serif;
+		font-size:18px;
+		line-height:21px;
+		margin-bottom:10px;
+	}
+	
+	.equipo > .content > .presentacion > .descripcion > h3{
+		font-family:"Droid Sans", sans serif;
+		font-size:14px;
+		line-height:17px;
+		margin-bottom:10px;
+		font-weight:700;
+	}
+	
+	.equipo > .content > ul.ulEquipo{
+		list-style:none;
+		height:30px;
+	}
+	
+	.equipo > .content > ul.ulEquipo li{
+		float:left;
+		background-color:#099;
+		margin-right:2px;
+		padding:5px 0 7px 0;
+	}
+	
+	.equipo > .content > ul.ulEquipo li a{
+		text-decoration:none;
+		color:#FFF;
+		background-color:#036;
+		padding:5px 10px 7px 10px;
+		font-size:14px;
+		font-family:"Droid Sans", sans-serif;
+	}
+	
+	
+.clientes{
+	min-height:750px;
+	background-image:url(images/proyectos.jpg);
+	background-position:top;
+	background-repeat:no-repeat;
+	padding-bottom:155px;
+	background-color:#3CB5A2;
+}
+
+	.clientes > .espacio{
+		height:120px;
+	}
+	.clientes > .content{
+		width:605px;
+		min-width:605px;
+		margin:0 auto 0 auto;
+		padding:0 295px 0 0;
+		min-height:654px;	
+	}
+	
+	.clientes > .content > h1{
+		color:#FFF;
+		font-size:29px;
+		line-height:33px;
+		margin-bottom:15px;
+	}
+	
+	.clientes > .content > h2{
+		font-family:"Droid Sans", sans-serif;
+		font-size:18px;
+		line-height:22x;
+		margin-bottom:25px;
+		font-weight:bold;
+		color:#115D77;
+	}
+	
+	.clientes > .content > p{
+		color:#FFF;
+		font-family:"Droid Sans";
+	}
+	
+	.clientes > .content > ol{
+		padding-left:35px;
+		margin-bottom:10px;
+		margin-top:15px;
+		list-style:square;
+	}
+	
+	.clientes > .content > ol li{
+		font-family:"Amethysta";
+		font-size:15px;
+		color:#FCFCFC;
+		line-height:18px;
+		padding:2px 0 2px 0; 
+	}
+	
+	.clientes > .content > .separador{
+		margin:50px 0 50px 0;
+		border-top:1px #2D8678 solid;
+		background-color:#B1E4DD;
+		height:1px;
+	}
+	
+	.clientes > .content > .imgs> h3{
+		color:#FFF;
+		font-family:"Droid Sans", sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		line-height:20px;
+		cursor:pointer;
+	}
+	
+	.clientes > .content > .imgs{
+		background-color:#3CA593;
+		padding:15px 20px 20px 20px;
+		margin:20px 0 20px 0;
+	}
+	
+	.clientes > .content > .imgs span.nota{
+		color:#EDFDFE;
+		font-size:12px;
+		cursor:pointer;
+	}
+	
+	.clientes > .content > .imgs > .espacio{
+		height:15px;
+	}
+	
+	.clientes > .content > .imgs > .item{
+		float:left;
+		width:90px;
+		height:70px;
+		margin:0;
+		border:1px #FFF solid;
+	}
+
+.contacto{
+	min-height:750px;
+	background-image:url(images/proyectos2.jpg);
+	padding-bottom:155px;
+}
+
+	.contacto > .espacio{
+		height:150px;
+	}
+	.contacto > .content{
+		width:605px;
+		min-width:605px;
+		margin:0 auto 0 auto;
+		padding:0 0 0 170px;
+		min-height:654px;
+		color:#FFF;
+	}
+	
+	.contacto > .content > h1{
+		font-size:26px;
+		line-height:31px;
+		margin-bottom:15px;
+	}
+	
+	
+.referencias{
+	min-height:700px;
+	background-image:url(images/referencias.jpg);
+	background-repeat:no-repeat;
+	padding-bottom:55px;
+	background-position:center top;
+}
+	
+	.referencias > .espacio{
+		height:120px;
+	}
+	.referencias > .content{
+		width:605px;
+		min-width:605px;
+		margin:0 auto 0 auto;
+		padding:0 295px 0 0;
+		min-height:654px;	
+	}
+	
+	.referencias > .content > h1{
+		color:#FFF;
+		font-size:29px;
+		line-height:33px;
+		margin-bottom:15px;
+	}
+	
+	.referencias > .content > .senal{
+		background-color:#FFF;
+		height:3px;
+		width:45px;
+		margin-bottom:10px;
+	}
+	
+	.referencias > .content > ol li{
+		font-size:13px;
+		padding:4px 0 4px 0;
+	}
+	
+	.referencias > .content > ol > li > ol >li{
+		font-weight:normal;
+		color:#F1EDEB;
+	} 
+	
+	.referencias > .content > ol > li{
+		border-bottom:1px #5C4A3C dotted;
+		margin-bottom:15px;
+		font-weight:bold;
+		color:#FFF;
+	}
+
+.ubicacion{
+	min-height:750px;
+	background-image:url(images/ubicacion.jpg);
+}
+
+.ubicacion > .espacio{
+	height:95px;
+	min-height:95px;
+}
+.ubicacion > .titulo{
+	padding:15px;
+	width:590px;
+	margin:0 auto 0 auto;
+	position:relative;
+}
+
+	.ubicacion > .titulo > .tit{
+		background-color:#000;
+		color:#FFF;
+		width:400px;
+		padding:15px;
+	}
+
+	.ubicacion > .content >h1{
+		font-family:"Droid Sans", sans-serif;
+		font-size:23px;
+		line-height:25px;
+		font-weight:bold;
+		margin-bottom:15px;
+	}
+	
+	.ubicacion > .content > .senal{
+		background-color:#000;
+		height:3px;
+		width:40px;
+		margin-bottom:10px;
+	}
+	
+	.ubicacion > .content > h2{
+		font-weight:normal;
+		font-family:"Droid Sans", sans-serif;
+		font-size:18px;
+		margin:10px 0 20px 0;
+		color:#2D1600;
+	}
+	
+	.ubicacion > .content > p{
+		font-size:14px;
+		line-height:17px;
+		padding-bottom:5px;
+	}
+
+	.ubicacion > .content{
+		width:550px;
+		padding:20px 20px 120px 20px;
+		margin:0 auto 0 auto;
+		background-color:#FFF;
+	}
+/*********************** TERMINA SECCIONES *************************/

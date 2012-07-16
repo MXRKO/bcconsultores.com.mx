@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Prueba Cambio Fondo</title>
+<style>
+body{
+	font-size:16px;
+}
+#inicio{
+	background-image:url(images/Android_Wallpaper_by_liamw.jpg);
+	background-position: 50% -486.59999999999997px;
+}
+#acercade{
+	background-image:url(images/Minimalistic_wallpaper_by_Rokis17.jpg);
+	background-position: 50% -141px;
+}
+#contacto{
+	background-image:url(images/Minimalistic_wallpaper_by_N1m.jpg);
+	background-position: 50% -70.5px;
+}
+#inicio, #acercade, #contacto, body, p, h2{
+	padding:0;
+	margin:0;
+}
+
+#inicio, #acercade, #contacto{
+	height:800px;
+}
+</style>
+<script type="text/javascript" language="javascript" src="lib/js/jquery-1.7.min.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/inview.js"></script>
+<script>
+$(document).ready(function(){
+	alert("Entro");					   
+	var $window = $(window);
+	var windowHeight = $window.height();
+	$('#inicio, #acercade, #contacto').bind('inview', function (event, visible)
+	{
+		if (visible == true)
+		{
+			$(this).addClass("inview");
+		}
+		else
+		{
+			$(this).removeClass("inview");
+		}
+	});
+	
+	function newPos(x, windowHeight, pos, adjuster, inertia)
+	{
+		return x + "% " + (-((windowHeight + pos) - adjuster) * inertia)  + "px";
+	}
+	
+	function Move()
+	{ 
+		var pos = $window.scrollTop();
+
+		//Inicio
+		if($("#inicio").hasClass("inview"))
+		{
+			$(this).css({'backgroundPosition': newPos(50, windowHeight, pos, 900, 0.6)});
+			//$imgHome.css({'backgroundPosition': newPos(40, windowHeight - 260, pos, 900, 0.3)});
+		}
+		
+		//agencia
+		if($("#acercade").hasClass("inview"))
+		{
+			$(this).css({'backgroundPosition': newPos(50, windowHeight, pos, 2000, 0.6)});
+		}
+		
+		//por que
+		if($("#contacto").hasClass("inview"))
+		{
+			$(this).css({'backgroundPosition': newPos(50, windowHeight, pos, 2000, 0.3)});
+		}
+	}
+
+
+	$window.resize(function()
+	{
+		Move();
+	});		
+
+	$window.bind('scroll', function()
+	{
+		Move();
+	});
+});
+</script>
+</head>
+<body>
+<div id="inicio" class="inview">
+<h2>Inicio</h2>
+<p>I decided to move my plugins from my private svn to Google Code. This means the code being developed is now public and can be viewed and reviewed by anyone.</p>
+<p>I'm also trying to automate the building process with a makefile in order to make deploys less tedious (thus more frequent :)).</p>
+<p>Everyone's invited to check the code, review it, comment and report bugs. The repository has a few plugins that I actually never released. It doesn't contain non-jQuery scripts yet. I haven't moved them yet and won't do yet.</p>
+
+<h2>Inicio</h2>
+<p>I decided to move my plugins from my private svn to Google Code. This means the code being developed is now public and can be viewed and reviewed by anyone.</p>
+<p>I'm also trying to automate the building process with a makefile in order to make deploys less tedious (thus more frequent :)).</p>
+<p>Everyone's invited to check the code, review it, comment and report bugs. The repository has a few plugins that I actually never released. It doesn't contain non-jQuery scripts yet. I haven't moved them yet and won't do yet.</p>
+
+</p>
+</div>
+<div id="acercade" class="inview">
+<h2>Acerca de</h2>
+<p>I decided to move my plugins from my private svn to Google Code. This means the code being developed is now public and can be viewed and reviewed by anyone.</p>
+<p>I'm also trying to automate the building process with a makefile in order to make deploys less tedious (thus more frequent :)).</p>
+<p>Everyone's invited to check the code, review it, comment and report bugs. The repository has a few plugins that I actually never released. It doesn't contain non-jQuery scripts yet. I haven't moved them yet and won't do yet.</p>
+<h2>Acerca de</h2>
+<p>I decided to move my plugins from my private svn to Google Code. This means the code being developed is now public and can be viewed and reviewed by anyone.</p>
+<p>I'm also trying to automate the building process with a makefile in order to make deploys less tedious (thus more frequent :)).</p>
+<p>Everyone's invited to check the code, review it, comment and report bugs. The repository has a few plugins that I actually never released. It doesn't contain non-jQuery scripts yet. I haven't moved them yet and won't do yet.</p>
+</div>
+<div id="contacto" class="inview">
+<h2>Contacto</h2>
+<p>I decided to move my plugins from my private svn to Google Code. This means the code being developed is now public and can be viewed and reviewed by anyone.</p>
+<p>I'm also trying to automate the building process with a makefile in order to make deploys less tedious (thus more frequent :)).</p>
+<p>Everyone's invited to check the code, review it, comment and report bugs. The repository has a few plugins that I actually never released. It doesn't contain non-jQuery scripts yet. I haven't moved them yet and won't do yet.</p>
+<h2>Contacto</h2>
+<p>I decided to move my plugins from my private svn to Google Code. This means the code being developed is now public and can be viewed and reviewed by anyone.</p>
+<p>I'm also trying to automate the building process with a makefile in order to make deploys less tedious (thus more frequent :)).</p>
+<p>Everyone's invited to check the code, review it, comment and report bugs. The repository has a few plugins that I actually never released. It doesn't contain non-jQuery scripts yet. I haven't moved them yet and won't do yet.</p>
+
+</div>
+</body>
+</html>

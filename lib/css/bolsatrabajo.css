@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/*.contenedorBolsa{
+	background-color:#FFF;
+	background-image:url(../../images/borde_right.jpg);
+	background-repeat:repeat-y;
+	background-position:right;
+	padding:0 5px 0 0;
+	width:875px;
+	margin:0 auto 0 auto;
+	padding:20px 65px 20px 60px;
+}
+
+.imgfondo{
+	background-image:url(../../images/bolsatrabajoimg.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding-left:240px;
+	min-height:290px;
+	width:450px;
+}
+
+#imagenPrincipalBolsa{
+	background-image:url(../../images/bolsa.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:118px;
+	width:100%;
+}*/
+
+#imagenPrincipalBolsa{
+	background-image:url(../../images/bolsa.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:100px;
+	width:100%;
+}
+
+.contenedorBolsa{
+	background-color:#FFF;
+	background-image:url(../../images/borde_right.jpg);
+	background-repeat:repeat-y;
+	background-position:right;
+	padding:0 5px 0 0;
+	width:995px;
+	margin:0 auto 0 auto;
+	padding:20px 5px 20px 0;
+}
+
+.imgfondo{
+	padding-left:80px;
+	padding-right:80px;
+	min-height:140px;
+}
+
+.formulario{
+	background-image:url(../../images/fondoArchivo.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	padding:80px 40px 40px 100px;
+}
+
+label{
+	font-family: 'AvantGardeBkBTBook';
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+
+input.campo{
+	padding:3px;
+	font-family: 'SylfaenRegular';
+}
+
+div.contenedorBolsa > p.nota{
+	color:#FFF;
+	font-size:14px;
+	padding-bottom:0;
+	margin-bottom:0;
+	line-height:12px;
+}
+
+table.formu{
+	padding:7px 5px 7px 5px;
+	width:460px;
+}
+
+input.imgBtn{
+	border:0;
+	outline:none;
+}
+
+.mensaje{
+	padding:20px;
+	margin:0 80px 0 80px;
+	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+.alerta{
+	border:3px #9F6000 solid;
+	background-color:#FEEFB3;
+}
+
+.exito{
+	border:3px #00529B solid;
+	background-color:#BDE5F8;
+}
+
+.error{
+	border:3px #D8000C solid;
+	background-color:#FFBABA;
+}
