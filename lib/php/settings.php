@@ -7,8 +7,8 @@
 	
 	$menu=array(0=>"../inicio/",
 				1=>"../quienes-somos/",
-				2=>"../servicios/",
-				3=>"../publicaciones/",
+				2=>"../resumen/index.php",
+				3=>"../servicios/",
 				4=>"../bolsa-de-trabajo/",
 				5=>"../noticias/",
 				6=>"../galeria/",

@@ -89,11 +89,11 @@
             <div id="contentMenu">
                 <ul class="principal">
                     <li><a href="<?=$menu[7]?>">Contacto</a></li>
-                    <li class="seleccionado"><a href="../<?=$menu[6]?>">Galeria</a></li>
+                    <li class="seleccionado"><a "../<?=$menu[6]?>">Galeria</a></li>
                     <li><a href="<?=$menu[5]?>">Noticias</a></li>
                     <li><a href="<?=$menu[4]?>">Bolsa de trabajo</a></li>
-                    <li><a href="<?=$menu[3]?>">Publicaciones</a></li>
-                    <li><a href="<?=$menu[2]?>">Servicios</a></li>
+                    <li><a href="<?=$menu[3]?>">Servicios</a></li>
+                    <li><a href="<?=$menu[2]?>">Curriculum</a></li>
                     <li><a href="<?=$menu[1]?>">Quienes somos</a></li>
                     <li><a href="<?=$menu[0]?>">Inicio</a></li>
                 </ul>

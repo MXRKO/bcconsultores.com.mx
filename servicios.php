@@ -59,12 +59,12 @@
             </div>
             <div id="contentMenu">
                 <ul class="principal">
-                    <li><a href="<?=$menu[7]?>">Contacto</a></li>
+                	<li><a href="<?=$menu[7]?>">Contacto</a></li>
                     <li><a href="<?=$menu[6]?>">Galeria</a></li>
                     <li><a href="<?=$menu[5]?>">Noticias</a></li>
                     <li><a href="<?=$menu[4]?>">Bolsa de trabajo</a></li>
-                    <li><a href="<?=$menu[3]?>">Publicaciones</a></li>
                     <li class="seleccionado"><a href="#">Servicios</a></li>
+                    <li><a href="<?=$menu[2]?>">Curriculum</a></li>
                     <li><a href="<?=$menu[1]?>">Quienes somos</a></li>
                     <li><a href="<?=$menu[0]?>">Inicio</a></li>
                 </ul>
@@ -119,7 +119,7 @@
                 </ul>
             </div>
             <div class="fondoIzq">
-        		<p>Teléfonos: <img src="../<?=$fixed_uri?>images/telefono.jpg" width="5" height="12" alt="tel" /> 01(228) 2001585 / (Lada sin costo) 01 (800) 001 58 52</p>
+        		<p>Teléfonos: <img src="../images/telefono.jpg" width="5" height="12" alt="tel" /> 01(228) 2001585 / (Lada sin costo) 01 (800) 001 58 52</p>
                 <p>Olmos No. 1, Fraccionamiento Fuentes de las Ánimas.</p>	
                 <p>BC Consultores Ambientales y de Riesgos S.C.</p>
             </div> 
@@ -128,7 +128,6 @@
                 <p><a class="linkrss" href="http://www.facebook.com/feeds/page.php?id=330648996963487&format=rss20">Agreganos a tu lector feeds.</a></p>
             </div> 
             <div class="limpiar"></div>
-            <!-- <div class="subfondo"><p class="psubfondo">BC Consultores Ambientales y de Riesgos S.C.</p></div>-->
         </div>
     </div>
 </div>
