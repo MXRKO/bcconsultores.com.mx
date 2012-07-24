@@ -154,8 +154,7 @@
                     <td><p>Dar a conocer a
                       los participantes la
                       organización del
-                      SINAPROC (No se qué
-                      es esto) para una óptima comprensión del papel
+                      SINAPROC para una óptima comprensión del papel
                       que representa una
                       empresa capacitada en materia de Protección
                     Civil.</p></td>
