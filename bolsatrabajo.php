@@ -29,6 +29,17 @@
 			return "novalido";
 		}
 	}
+	
+	function correo($de_nombre,$de,$para_nombre,$para,$asunto, $contenido){
+		$headers   = array();
+		$headers[] = "MIME-Version: 1.0";
+		$headers[] = "Content-type: text/plain; charset=utf-8";
+		$headers[] = "From: ".$de_nombre." <".$de.">";
+		$headers[] = "Reply-To: ".$para_nombre." <".$para_nombre.">";
+		$headers[] = "Subject: {".$asunto."}";
+		$headers[] = "X-Mailer: PHP/".phpversion();
+	    @mail($para, $asunto, $contenido, implode("\r\n", $headers));	
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -119,6 +130,11 @@
 		  	if($_POST["Accion"]=="ENVIAR"){
 				if(isset($_POST["txtNombre"])!="" && isset($_POST["txtApellidos"])!="" && isset($_FILES["txtArchivo"]["name"])!=""){
 					if(($_FILES["txtArchivo"]["size"]/1024)<10240){
+						correo($_POST["txtNombre"]." ".$_POST["txtApellidos"],$_POST["txtEmail"],"Sylvana Ruby Balán Cáceres","balan.caceres@gmail.com","Curriculum desde BCconsultores", "El visitante: ".$_POST["txtNombre"]." ".$_POST["txtApellidos"]." ha subido su curriculum a la página BCconsultores.com.mx.\r\n \r\n Para ver el curriculum en el sistema de control de la página dirigase al módulo de 'Bolsa de trabajo', recuerde que para entrar al sistema control de la página debe contar con usuario y contraseña. \r\n \r\n \r\n *Este correo ha sido enviado automaticamente desde el sitio:bcconsultores.com.mx.");
+						correo("BCconsultores.com.mx","u157790@server61.neubox.net",$_POST["txtNombre"]." ".$_POST["txtApellidos"],$_POST["txtEmail"],"Envio de Curriculum desde BCconsultores", "Muchas gracias por tu interés, tu curriculum ha sido enviado satisfactoriamente, nosotros nos comunicaremos a la brevedad. \r\n \r\n *Este correo ha sido generado de forma automática desde la página BCconsultores.com.mx, si tu correo ha sido proporcionado por error, por favor has caso omiso de este correo.");
+						if(trim($_POST["txtEmail"]=="")){
+							$_POST["txtEmail"]="No proporcionado";
+						}
 						$sql="INSERT INTO bolsatrabajo(nombre, apellidos, fecha) VALUES('".utf8_decode($_POST["txtNombre"])."','".utf8_decode($_POST["txtApellidos"])."', NOW())";
 						$result=mysql_query($sql);
 						$id=mysql_insert_id();
@@ -155,12 +171,16 @@
           	  <form id="Datos" name="Datos" action="../bolsa-de-trabajo/" method="post" enctype="multipart/form-data">
               <table class="formu" width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="21%"><label for="txtNombre">Nombre</label></td>
+                  <td width="21%"><label for="txtNombre">*Nombre</label></td>
                   <td width="79%"><input class="campo" name="txtNombre" type="text" id="txtNombre" size="45"></td>
                 </tr>
                 <tr>
-                  <td><label for="txtApellidos">Apellidos</label></td>
+                  <td><label for="txtApellidos">*Apellidos</label></td>
                   <td><input class="campo" name="txtApellidos" type="text" id="txtApellidos" size="45"></td>
+                </tr>
+                <tr>
+                  <td><label for="txtEmail">*Email</label></td>
+                  <td><input class="campo" name="txtEmail" type="text" id="txtEmail" size="45" /></td>
                 </tr>
                 <tr>
                   <td><label for="txtArchivo">Curriculum</label></td>
@@ -168,12 +188,11 @@
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
-                  <td><p class="nota">(Únicamente se aceptan archivos menores a 10 mb y con extensión: pdf, doc, docx)</p></td>
+                  <td><p class="nota">*Todos los campos marcados con (*) asterisco son requeridos (Únicamente se aceptan archivos menores a 10 mb y con extensión: pdf, doc, docx)</p></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
-                  <td><!-- <button id="btEnviar" value="Enviar" class="btBlanco"><span>Enviar</span></button>-->
-                  <input id="btnEnviar" name="btnEnviar" type="image" class="imgBtn" src="../images/btnBnco.jpg"  />
+                  <td><input id="btnEnviar" name="btnEnviar" type="image" class="imgBtn" src="../images/btnBnco.jpg"  />
                   </td>
                 </tr>
               </table>
