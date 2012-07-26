@@ -95,6 +95,7 @@ if(trim($_SESSION["iduser"])==""){
         <li><a class="seleccionado" href="<?=$links[0]?>">Noticias</a></li>
         <li><a href="<?=$links[1]?>">Publicaciones</a></li>
         <li><a href="<?=$links[2]?>">Bolsa de trabajo</a></li>
+        <li><a href="<?=$links[3]?>">Galerias</a></li>
     </ul>
     <div class="limpiar"></div>
 </div>

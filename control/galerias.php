@@ -6,10 +6,11 @@ header ("Cache-Control: no-cache, must-revalidate"); //no guardar en CACHE
 header ("Pragma: no-cache"); 
 include("../lib/php/conexion.php");
 include("settings.php");
-$nombreTablaNoticias="publicaciones";
+$nombreTabla="bolsatrabajo";
 
 function formatoFecha($fecha){
-	$fechas = explode("-",$fecha); 
+	$primero=explode(" ",$fecha); 
+	$fechas = explode("-",$primero[0]); 
 	$anio=$fechas[0];
 	$mes="";
 	$dia=$fechas[2];
@@ -54,25 +55,15 @@ function formatoFecha($fecha){
 	return $dia." - ".$mes." - ".$anio;
 }
 
-function eliminarArchivo($id, $sub){
-	if(!@file_exists("../imagenes/imgs_publicaciones/publicacion_".$id."_".$sub.".jpg")) return true;
-	if(!@unlink("../imagenes/imgs_publicaciones/publicacion_".$id."_".$sub.".jpg")) return false;
-	if(!@unlink("../imagenes/imgs_publicaciones/publicacion_".$id."_".$sub."_thumb.jpg")) return false;
+function eliminarArchivo($id,$ext){
+	if(!@file_exists("../archivos_curr/curriculum".$id.".".$ext)) return true;
+	if(!@unlink("../archivos_curr/curriculum".$id.".".$ext)) return false;
 	return true;
 }
 
 if($_POST["Accion"]=="ELIMINAR"){
-	if(mysql_query("DELETE FROM ".$nombreTablaNoticias." WHERE id='".$_POST["id"]."'")){
-		$existe=true;
-		$sub=1;
-		while($existe){
-			eliminarArchivo($_POST["id"],$sub);
-			if(file_exists("../imagenes/imgs_publicaciones/publicacion_".$_POST["id"]."_".($sub+1).".jpg")){
-				$existe=true;
-				$sub++;
-			}else
-				$existe=false;
-		}
+	if(mysql_query("DELETE FROM ".$nombreTabla." WHERE id='".$_POST["id"]."'")){
+		eliminarArchivo($_POST["id"],$_POST["extencion"]);
 		$respuesta="ELIMINO";	
 	}
 	else
@@ -83,12 +74,12 @@ if($_POST["Accion"]=="ELIMINAR"){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Publicaciones</title>
+<title>Bolsa de Trabajo</title>
 <link href="../lib/css/control.css" rel="stylesheet" type="text/css" />
 <link href="../lib/css/management.css" rel="stylesheet" type="text/css" />
 </head>
 <script type="text/javascript" language="javascript" src="../lib/js/jquery-1.7.min.js"></script>
-<script src="publicaciones.js"></script>
+<script src="bolsa.js"></script>
 <?
 if(trim($_SESSION["iduser"])==""){
 	?>
@@ -102,9 +93,9 @@ if(trim($_SESSION["iduser"])==""){
 <div class="barra">
     <ul class="principal">
         <li><a href="<?=$links[0]?>">Noticias</a></li>
-        <li><a href="<?=$links[1]?>" class="seleccionado" >Publicaciones</a></li>
+        <li><a href="<?=$links[1]?>">Publicaciones</a></li>
         <li><a href="<?=$links[2]?>">Bolsa de trabajo</a></li>
-        <li><a href="<?=$links[3]?>">Galerias</a></li>
+        <li><a href="<?=$links[3]?>" class="seleccionado" >Galerias</a></li>
     </ul>
     <div class="limpiar"></div>
 </div>
@@ -124,34 +115,32 @@ if(isset($respuesta)){
 	}
 }
 ?>
-<h2>Publicaciones</h2>
+<h2>Bolsa de Trabajo</h2>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tInfo">
   <tr>
-    <td width="38%">Titulo</td>
-    <td width="24%">Autor</td>
-    <td width="19%">Fecha</td>
-    <td width="10%">&nbsp;</td>
-    <td width="9%">&nbsp;</td>
+    <td width="27%">Nombre</td>
+    <td width="35%">Descripcion</td>
+    <td width="27%">Imagenes</td>
+    <td width="11%">&nbsp;</td>
   </tr>
   <?
-  $result=mysql_query("SELECT*FROM ".$nombreTablaNoticias." WHERE fecha!='' ORDER BY id DESC");
+  $result=mysql_query("SELECT*FROM ".$nombreTabla." ORDER BY id DESC");
   $i=0;
   while($fila=mysql_fetch_array($result)){
-  ?>
-  <tr>
-    <td><?=utf8_encode($fila["titulo"])?></td>
-    <td><?=utf8_encode($fila["autor"])?></td>
-    <td><?=formatoFecha($fila["fecha"])?></td>
-    <td><input type="button" class="botonesConf" name="btModificar<?=$i?>" id="btModificar<?=$i?>" value="Modificar" onclick="modificar('<?=$fila["id"]?>');" /></td>
-    <td><input type="button" class="botonesAlert" name="btEliminar<?=$i?>" id="btEliminar<?=$i?>" value="Eliminar" onclick="eliminar('<?=$fila["id"]?>');" /></td>
-  </tr>
-  <?
-  	$i++;
+	  ?>
+	  <tr>
+		<td><?=utf8_encode($fila["nombre"]." ".$fila["apellidos"])?></td>
+		<td><?=formatoFecha($fila["fecha"])?></td>
+		<td>&nbsp;</td>
+		<td><input type="button" class="botonesAlert" name="btEliminar<?=$i?>" id="btEliminar<?=$i?>" value="Eliminar" onclick="eliminar('<?=$fila["id"]?>','<?=$fila["archivo"]?>');" /></td>
+	  </tr>
+	  <?
+  	  $i++;
   }
   ?>
 </table>
-<input type="button" class="botonesConf" name="btNuevo" id="btNuevo" value="Nuevo" />
 <input type="hidden" name="id" id="id"/>
+<input type="hidden" name="extencion" id="extencion"/>
 <input type="hidden" name="Accion" id="Accion" />
 </form>
 </div>
